@@ -9,5 +9,13 @@
     <body>
         <h1>Welcome to my Django site 🚀</h1>
         <p>This page is rendered using Django Templates.</p>
+        <h1>Contacts list</h1>
+        <ul>
+            {% for contact in contacts %}
+                <li>{{ contact.name }} - {{ conatct.email }}</li>
+            {% empty %}
+                <li>No contact yet</li>
+            {% endfor %}        
+        </ul>
     </body>
 </html>
